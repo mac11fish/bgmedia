@@ -10,9 +10,8 @@ const Home: NextPage = () => {
         <h1 className="text-4xl font-bold mb-8 text-primary-content bg-primary inline-block p-2">Welcome</h1>
         <div>
           <p className="mt-0">
-            We're running an experiment to fund focused, high-leverage open-source work by providing a monthly UBI to
-            developers, handpicked by Carlos & BG Sand Garden, rewarding them for their ongoing contributions to
-            BuidlGuidl and the Ethereum Ecosystem.
+            We're running an experiment to fund focused, high-leverage open-source work by providing streams to builders
+            rewarding them for their ongoing contributions to BuidlGuidl and the Ethereum Ecosystem.
           </p>
           <p>
             Our emphasis is on quality over quantity, striving for well-crafted products. Our approach embraces

@@ -13,7 +13,7 @@ export const useAddBuilderEvents = () => {
   const [{ data: addBuilderEventsData, fetching: isLoading }] = useQuery({
     query: BuildersQuery,
     variables: {
-      cohortAddress: contracts[10][0].contracts.SandGardenStreams.address,
+      cohortAddress: contracts[10][0].contracts.CohortStreams.address,
     },
   });
 

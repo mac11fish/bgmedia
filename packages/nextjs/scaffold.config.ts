@@ -10,7 +10,7 @@ type ScaffoldConfig = {
 
 const scaffoldConfig = {
   // The network where your DApp lives in
-  targetNetwork: chains.optimism,
+  targetNetwork: chains.optimism, //chains.optimism,
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect on the local network
@@ -29,11 +29,8 @@ const scaffoldConfig = {
   walletConnectProjectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || "3a8170812b534d0ff9d794f19a901d64",
 
   contracts: {
-    _SandGardenStreamsOld: {
-      fromBlock: 101114639,
-    },
-    SandGardenStreams: {
-      fromBlock: 113132153,
+    CohortStreams: {
+      fromBlock: 121082238,
     },
   },
 } satisfies ScaffoldConfig;

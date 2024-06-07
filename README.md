@@ -1,12 +1,12 @@
-# 👾 Sand Garden Website 
+# 🚢 Ship Yard Cohort Website 
 
-We're running an experiment to fund focused, high-leverage open-source work by providing a monthly UBI to developers, handpicked by Carlos & BG Sand Garden, rewarding them for their ongoing contributions to BuidlGuidl and the Ethereum Ecosystem.
+We're running an experiment to fund focused, high-leverage open-source work by providing streams to builders rewarding them for their ongoing contributions to BuidlGuidl and the Ethereum Ecosystem.
 
 Our emphasis is on quality over quantity, striving for well-crafted products. Our approach embraces iteration, refining our builds while fostering a culture of continuous learning and improvement.
 
 This initiative is made possible by BuidlGuidl!
 
-Read more at the [F.A.Q](https://sandgarden.buidlguidl.com/faq)
+Read more at the [F.A.Q](https://shipyard.buidlguidl.com/faq)
 
 ---
 
@@ -35,7 +35,7 @@ We are using Ponder for indexing cohorts events (adding builders, withdrawals, e
 You have 3 options:
 1. Run your own Ponder instance (configure the URL in `packages/nextjs/_app.tsx`)
 2. Use the BG Ponder instance (make a [PR](https://github.com/BuidlGuidl/bg-ponder-indexer) with your cohorts contract address)
-3. Rollback to fetching events with SE-2 hooks (check out PRs [#6](https://github.com/BuidlGuidl/sandgarden.buidlguidl.com/pull/6) and [#7](https://github.com/BuidlGuidl/sandgarden.buidlguidl.com/pull/7))
+3. Rollback to fetching events with SE-2 hooks (check out PRs [#6](https://github.com/BuidlGuidl/shipyard.buidlguidl.com/pull/6) and [#7](https://github.com/BuidlGuidl/shipyard.buidlguidl.com/pull/7))
 
 ## Quickstart
 
@@ -45,7 +45,7 @@ To get started follow the steps below:
 
 ```
 git clone https://github.com/buidlguidl/.git
-cd sandgarden.buidlguidl.com
+cd shipyard.buidlguidl.com
 yarn install
 ```
 

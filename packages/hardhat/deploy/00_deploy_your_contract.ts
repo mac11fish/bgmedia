@@ -23,7 +23,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  await deploy("SandGardenStreams", {
+  await deploy("CohortStreams", {
     from: deployer,
     // Contract constructor arguments
     args: [],
@@ -33,15 +33,17 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
-  const yourContract = await hre.ethers.getContract("SandGardenStreams", deployer);
+  const yourContract = await hre.ethers.getContract("CohortStreams", deployer);
 
   console.log("🫡 adding batch of builders");
   const builderStakes = Array(builderList.length).fill(ethers.utils.parseEther("1.5"));
   await yourContract.addBatch(builderList, builderStakes);
+
+  await yourContract.transferOwnership(builderList[0]);
 };
 
 export default deployYourContract;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["YourContract"];
+deployYourContract.tags = ["CohortStreams"];

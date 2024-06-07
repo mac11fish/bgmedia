@@ -17,23 +17,15 @@ export const useCohortWithdrawEvents = () => {
   const [{ data: newWithdrawEventsData, fetching: isLoadingNew }] = useQuery({
     query: WithdrawalsQuery,
     variables: {
-      cohortAddress: contracts[10][0].contracts.SandGardenStreams.address,
-    },
-  });
-
-  const [{ data: oldWithdrawEventsData, fetching: isLoadingOld }] = useQuery({
-    query: WithdrawalsQuery,
-    variables: {
-      cohortAddress: contracts[10][0].contracts._SandGardenStreamsOld.address,
+      cohortAddress: contracts[10][0].contracts.CohortStreams.address,
     },
   });
 
   const newContractWithdrawEvents = newWithdrawEventsData?.cohortWithdrawals || [];
-  const oldContractWithdrawEvents = oldWithdrawEventsData?.cohortWithdrawals || [];
 
-  const data = [...newContractWithdrawEvents, ...oldContractWithdrawEvents];
+  const data = [...newContractWithdrawEvents];
 
-  const isLoading = isLoadingNew || isLoadingOld;
+  const isLoading = isLoadingNew;
 
   return { data, isLoading };
 };

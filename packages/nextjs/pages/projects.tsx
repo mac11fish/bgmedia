@@ -8,52 +8,18 @@ import { useCohortWithdrawEvents } from "~~/hooks/useCohortWithdrawEvents";
 
 const projects = [
   {
-    name: "Scaffold-ETH 2",
+    name: "Hacked Wallet Recovery",
     description:
-      "An open-source, up-to-date toolkit for building decentralized applications on the Ethereum blockchain.",
-    github: "https://github.com/scaffold-eth/scaffold-eth-2",
+      "We built this to make it super easy for victims of hacks to recover any remaining assets in their wallet without getting swept by the attacker.",
+    link: "https://hackedwalletrecovery.com",
+    github: "https://github.com/BuidlGuidl/flashbot-recovery-bundler",
   },
   {
-    name: "SpeedRunEthereum",
-    description: "A platform to learn how to build on Ethereum; the superpowers and the gotchas.",
-    link: "https://speedrunethereum.com",
-    github: "https://github.com/BuidlGuidl/SpeedRunEthereum",
-  },
-  {
-    name: "BuidlGuidl L2 testnet",
-    description: "L2 testnet (sepolia) for BuidlGuidl. Powered by the OP Stack.",
-    link: "https://l2.buidlguidl.com/",
-    github: "https://github.com/BuidlGuidl/l2.buidlguidl.com",
-  },
-  {
-    name: "ABI Ninja",
-    description: "Interact with any contract on Ethereum with a simple interface",
-    link: "https://abi.ninja/",
-    github: "https://github.com/buidlguidl/abi.ninja",
-  },
-  {
-    name: "BG Hacker Houses",
+    name: "Impact Calculator",
     description:
-      "An experiment to retroactively fund open-source work by providing a monthly UBI (via ETH stream) to open-source developers",
-    github: "https://github.com/BuidlGuidl/hacker-houses-streams",
-  },
-  {
-    name: "Event Burner Wallet",
-    description: "A burner wallet experience for events",
-    github: "https://github.com/BuidlGuidl/event-wallet",
-  },
-  {
-    name: "BuidlGuidl v3",
-    description:
-      "A curated group of Ethereum builders creating products, prototypes, and tutorials to enrich the web3 ecosystem.",
-    link: "https://buidlguidl.com/",
-    github: "https://github.com/scaffold-eth/buidlguidl-v3",
-  },
-  {
-    name: "BuidlGuidl Grants",
-    description: "BG grants is a platform for funding open-source work in the Ethereum ecosystem",
-    link: "https://grants.buidlguidl.com",
-    github: "https://github.com/buidlGuidl/grants.buidlguidl.com",
+      "This was a prototype that was built to facilitate the needs of Optimism in helping them figure out a new impact-led direction in their RetroPGF rounds.",
+    link: "https://impact-calculator.vercel.app",
+    github: "https://github.com/BuidlGuidl/impact-calculator",
   },
 ];
 

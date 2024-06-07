@@ -16,13 +16,13 @@ const Members: NextPage = () => {
   const [builderList, setBuilderList] = useState<string[]>([]);
 
   const { data: allBuildersData, isLoading: isLoadingBuilderData } = useScaffoldContractRead({
-    contractName: "SandGardenStreams",
+    contractName: "CohortStreams",
     functionName: "allBuildersData",
     args: [builderList],
   });
 
   const { writeAsync: doWithdraw } = useScaffoldContractWrite({
-    contractName: "SandGardenStreams",
+    contractName: "CohortStreams",
     functionName: "streamWithdraw",
     args: [ethers.utils.parseEther(amount || "0"), reason],
   });
@@ -50,7 +50,7 @@ const Members: NextPage = () => {
         <h1 className="text-4xl font-bold mb-8 text-primary-content bg-primary inline-block p-2">Members</h1>
         <div className="mb-16">
           <p className="mt-0 mb-10">
-            These are the BG Sand Garden active builders and their streams. You can click on any builder to see their
+            These are the BG Ship Yard active builders and their streams. You can click on any builder to see their
             detailed contributions.
           </p>
           {isLoadingBuilderData || isLoadingBuilderEvents ? (

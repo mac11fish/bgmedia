@@ -7,15 +7,15 @@ import { useDeployedContractInfo, useScaffoldContractRead } from "~~/hooks/scaff
 
 export const StreamContractInfo = () => {
   const { address } = useAccount();
-  const { data: streamContract } = useDeployedContractInfo("SandGardenStreams");
+  const { data: streamContract } = useDeployedContractInfo("CohortStreams");
 
   const { data: owner } = useScaffoldContractRead({
-    contractName: "SandGardenStreams",
+    contractName: "CohortStreams",
     functionName: "owner",
   });
 
   const { data: builderData } = useScaffoldContractRead({
-    contractName: "SandGardenStreams",
+    contractName: "CohortStreams",
     functionName: "streamedBuilders",
     args: [address],
   }) as {
