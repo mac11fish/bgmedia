@@ -1,5 +1,5 @@
-import { builderList } from "../../../builderList";
-import { ethers } from "ethers";
+// import { builderList } from "../../../builderList";
+// import { ethers } from "ethers";
 import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
@@ -35,11 +35,11 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   const yourContract = await hre.ethers.getContract("CohortStreams", deployer);
 
-  console.log("🫡 adding batch of builders");
-  const builderStakes = Array(builderList.length).fill(ethers.utils.parseEther("1.5"));
-  await yourContract.addBatch(builderList, builderStakes);
+  // console.log("🫡 adding batch of builders");
+  // const builderStakes = Array(builderList.length).fill(ethers.utils.parseEther("1.5"));
+  // await yourContract.addBatch(builderList, builderStakes);
 
-  await yourContract.transferOwnership(builderList[0]);
+  await yourContract.transferOwnership("0x11E91FB4793047a68dFff29158387229eA313ffE");
 };
 
 export default deployYourContract;

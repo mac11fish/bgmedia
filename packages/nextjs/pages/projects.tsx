@@ -8,18 +8,10 @@ import { useCohortWithdrawEvents } from "~~/hooks/useCohortWithdrawEvents";
 
 const projects = [
   {
-    name: "Hacked Wallet Recovery",
-    description:
-      "We built this to make it super easy for victims of hacks to recover any remaining assets in their wallet without getting swept by the attacker.",
-    link: "https://hackedwalletrecovery.com",
-    github: "https://github.com/BuidlGuidl/flashbot-recovery-bundler",
-  },
-  {
-    name: "Impact Calculator",
-    description:
-      "This was a prototype that was built to facilitate the needs of Optimism in helping them figure out a new impact-led direction in their RetroPGF rounds.",
-    link: "https://impact-calculator.vercel.app",
-    github: "https://github.com/BuidlGuidl/impact-calculator",
+    name: "BG Media, publications, and designs",
+    description: "",
+    link: "",
+    github: "",
   },
 ];
 
