@@ -10,7 +10,7 @@ type ScaffoldConfig = {
 
 const scaffoldConfig = {
   // The network where your DApp lives in
-  targetNetwork: chains.optimism, //chains.optimism,
+  targetNetwork: chains.mainnet, //chains.optimism,
 
   // The interval at which your front-end polls the RPC servers for new data
   // it has no effect on the local network
