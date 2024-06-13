@@ -31,7 +31,7 @@ export const StreamContractInfo = () => {
           Stream Contract
           <span
             className="tooltip text-white font-normal"
-            data-tip="All streams and contributions are handled by a contract on Optimism"
+            data-tip="All streams and contributions are handled by a contract on Mainnet"
           >
             <QuestionMarkCircleIcon className="h-5 w-5 inline-block ml-2" />
           </span>
@@ -39,7 +39,7 @@ export const StreamContractInfo = () => {
         <div className="flex gap-2 items-baseline">
           <div className="flex flex-col items-center">
             <Address address={streamContract?.address} />
-            <span className="text-xs text-[#f01a37]">Optimism</span>
+            <span className="text-xs text-[#323aa8]">Mainnet</span>
           </div>{" "}
           /
           <Balance address={streamContract?.address} className="text-3xl" />
