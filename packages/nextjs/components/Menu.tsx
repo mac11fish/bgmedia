@@ -20,16 +20,19 @@ export const Menu = () => {
             Members
           </Link>
         </li>
-        <li>
-          <Link href="/projects" className={`${asPath === "/projects" ? "" : "link"} link-primary underline-offset-2`}>
+        {/* <li>
+          <Link
+            href="/contributions"
+            className={`${asPath === "/contributions" ? "" : "link"} link-primary underline-offset-2`}
+          >
             Projects
           </Link>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <Link href="/faq" className={`${asPath === "/faq" ? "" : "link"} link-primary underline-offset-2`}>
             F.A.Q.
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
