@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { Share_Tech_Mono } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
 import NextNProgress from "nextjs-progressbar";
@@ -16,7 +16,7 @@ import { wagmiClient } from "~~/services/web3/wagmiClient";
 import { appChains } from "~~/services/web3/wagmiConnectors";
 import "~~/styles/globals.css";
 
-const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: "400" });
+const spaceMono = Space_Mono({ subsets: ["latin"], weight: "400" });
 
 const urqlClient = new Client({
   url: "https://bg-ponder-indexer-production.up.railway.app/",
@@ -38,7 +38,7 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
       <NextNProgress color="#c913ff" />
       <URQLProvider value={urqlClient}>
         <RainbowKitProvider chains={appChains.chains} avatar={BlockieAvatar}>
-          <div className={`flex flex-col min-h-screen ${shareTechMono.className}`}>
+          <div className={`flex flex-col min-h-screen ${spaceMono.className}`}>
             <Header />
             <main className="relative flex flex-col flex-1">
               <Component {...pageProps} />
