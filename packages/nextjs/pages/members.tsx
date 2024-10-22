@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Space_Grotesk } from "next/font/google";
 import { ethers } from "ethers";
 import type { NextPage } from "next";
 import { StreamContractInfo } from "~~/components/StreamContractInfo";
@@ -6,6 +7,8 @@ import { Address, EtherInput } from "~~/components/scaffold-eth";
 import { useScaffoldContractRead, useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useAddBuilderEvents } from "~~/hooks/useCohortAddBuilderEvents";
 import { useCohortWithdrawEvents } from "~~/hooks/useCohortWithdrawEvents";
+
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 
 const Members: NextPage = () => {
   const [reason, setReason] = useState("");
@@ -46,8 +49,8 @@ const Members: NextPage = () => {
 
   return (
     <>
-      <div className="max-w-3xl px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-primary-content bg-primary inline-block p-2">Members</h1>
+      <div className="max-w-3xl px-4 py-8 text-xs">
+        <h1 className={`text-4xl font-bold mb-8 ${spaceGrotesk.className}`}>Members</h1>
         <div className="mb-16">
           <p className="mt-0 mb-10">
             These are the BG Media active builders and their streams. You can click on any builder to see their detailed
@@ -59,34 +62,38 @@ const Members: NextPage = () => {
               <div className="text-lg loading-dots">Loading...</div>
             </div>
           ) : (
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-12">
               {allBuildersData?.map(builderData => {
                 if (builderData.cap.isZero()) return;
                 const cap = ethers.utils.formatEther(builderData.cap || 0);
                 const unlocked = ethers.utils.formatEther(builderData.unlockedAmount || 0);
                 const percentage = Math.floor((parseFloat(unlocked) / parseFloat(cap)) * 100);
                 return (
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-6" key={builderData.builderAddress}>
-                    <div className="flex flex-col md:items-center">
+                  <div className="flex flex-col" key={builderData.builderAddress}>
+                    <div className="flex flex-col">
+                      <div className="md:w-1/2 flex">
+                        <label
+                          htmlFor="withdraw-events-modal"
+                          className="cursor-pointer"
+                          onClick={() => {
+                            setSelectedAddress(builderData.builderAddress);
+                          }}
+                        >
+                          <Address address={builderData.builderAddress} disableAddressLink={true} />
+                        </label>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <progress
+                          className="progress rounded-none h-8 w-full progress-primary text-white"
+                          value={percentage}
+                          max="100"
+                        ></progress>
+
+                        <div>{percentage}%</div>
+                      </div>
                       <div>
                         Ξ {parseFloat(unlocked).toFixed(4)} / {cap}
                       </div>
-                      <progress
-                        className="progress w-56 progress-primary bg-white"
-                        value={percentage}
-                        max="100"
-                      ></progress>
-                    </div>
-                    <div className="md:w-1/2 flex">
-                      <label
-                        htmlFor="withdraw-events-modal"
-                        className="cursor-pointer"
-                        onClick={() => {
-                          setSelectedAddress(builderData.builderAddress);
-                        }}
-                      >
-                        <Address address={builderData.builderAddress} disableAddressLink={true} />
-                      </label>
                     </div>
                   </div>
                 );
