@@ -27,10 +27,11 @@ export const Header = () => (
     </Head>
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
       <div className="flex-col items-start">
-        <p className="m-0 text-xl md:text-3xl !leading-7">
-          <Link href="/">BG Media</Link>
-        </p>
-        <p className="m-0  leading-5">BuidlGuidl Media</p>
+        <div className="bgmedia-logo w-36">
+          <Link href="/">
+            <img src="/images/logo_bgmedia.svg" />
+          </Link>
+        </div>
       </div>
       <div className="navbar-end flex-grow">
         <RainbowKitCustomConnectButton />
