@@ -1,3 +1,6 @@
+Front-end redesign
+![screenshot](https://mediabuidlguidl.vercel.app/thumbnail.png)
+
 # 📺 BG Media Cohort
 
 We're running an experiment to fund focused, high-leverage open-source work by providing streams to builders rewarding them for their ongoing contributions to BuidlGuidl and the Ethereum Ecosystem.
