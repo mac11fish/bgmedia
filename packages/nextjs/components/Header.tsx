@@ -22,8 +22,8 @@ export const Header = () => (
         content="Funding high leverage BuidlGuidl members for their designs, social media contributions, and other media related work."
       />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image" content="https://media.buidlguidl.com/thumbnail.png" />
-      <meta property="twitter:image" content="https://media.buidlguidl.com/thumbnail.png" />
+      <meta property="og:image" content="https://mediabuidlguidl.vercel.app/thumbnail.png" />
+      <meta property="twitter:image" content="https://mediabuidlguidl.vercel.app/thumbnail.png" />
     </Head>
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
       <div className="flex-col items-start">
