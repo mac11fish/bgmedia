@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "~~/components/Menu";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
@@ -29,7 +30,7 @@ export const Header = () => (
       <div className="flex-col items-start">
         <div className="bgmedia-logo w-36">
           <Link href="/">
-            <img src="/images/logo_bgmedia.svg" />
+            <Image alt="bg media logo" src="/images/logo_bgmedia.svg" width="99" height="99" />
           </Link>
         </div>
       </div>
